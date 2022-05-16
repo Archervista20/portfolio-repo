@@ -2,6 +2,7 @@
     --main-bg-color: #d4d4ff;
     --mainfont: 'Poppins', sans-serif;
     --smallText: .8em;
+    --secondaryText: 1.2em;
 }
 
 * {
@@ -14,6 +15,7 @@ body {
     font-family: var(--mainfont);
     margin: 1.5em;
     background-image: url("/images/background/mainbg.jpg");
+    background-size: cover;
 }
 
 a {
@@ -30,7 +32,7 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgb(66, 79, 90);
+    background-color: rgb(65, 153, 105);
     width: 50%;
     height: 100vh;
     text-transform: uppercase;
@@ -47,24 +49,23 @@ nav ul {
 nav ul a {
     color: rgb(228, 228, 228);
     padding: .75em 2em;
-    font-weight: 600;
+    font-weight: 500;
     display: block;
 }
 
 nav .close{
-    width: 15%;
+    width: 25px;
     float: right;
     margin: 2em;
     cursor: pointer;
-    
 }
 
 nav ul a:hover {
-    background-color: rgb(46, 48, 47);
+    background-color: rgb(69, 70, 69);
 }
 
 
-div .item {
+div.item {
     width: 30px;
     height: 3px;
     margin: 5px;
@@ -87,7 +88,8 @@ section .profile {
 }
 
 section .profile img {
-    width: 40%;
+    width: 150px;
+    height: 250px;
     margin-right: 2.5em;
     border-radius: 8px;
 }
@@ -116,5 +118,94 @@ section .tech img:hover {
     margin: 1em 0;
 }
 
+@media only screen and (min-width: 680px) {
+    body {
+        margin: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 876px) {
+    body {
+        margin: 2.5em;
+    }
+    
+    .menu {
+        display: none;
+    }
+
+    section .profile {
+        display: flex;
+        align-items: center;
+        margin: 1em 0;
+        font-size: var(--secondaryText);
+    }
+
+    .more-info p {
+        font-size: var(--secondaryText);
+        margin: 1em 0;
+    }
+
+    nav {
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+    }
+
+    nav .close {
+        display: none;
+    }
+
+    nav .nav-links {
+        display: flex;
+        margin: 0;
+    }
+
+    nav .nav-links a {
+        color: rgb(65, 153, 105);
+    }
+
+    nav .nav-links a:hover {
+        background: none;
+        text-decoration: underline;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .wrapper {
+        margin: 2em;
+    }
+
+    section .profile img {
+        width: 200px;
+        height: 300px;
+        margin-right: 2.5em;
+        border-radius: 8px;
+        
+    }
+
+    @media only screen and (min-width: 1024px) {
+        body {
+            margin: 3.5em;
+        }
+
+        section .profile img {
+            width: 200px;
+            height: 300px;
+            margin-right: 2.5em;
+            border-radius: 8px;
+        }
+
+        .more-info h1 {
+            text-align: center;
+        }
+    
+}
 
 
+
+}
